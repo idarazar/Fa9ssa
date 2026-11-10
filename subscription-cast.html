@@ -1,294 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Subscription Terms for AirPlay Cast to TV. Learn about Premium subscriptions, free trials, billing, cancellation, and refunds.">
-    <title>Subscription Terms - Cast to TV: Screen Mirroring</title>
-    <style>
-        @page {
-            size: A4;
-            margin: 16mm 14mm;
-            background-color: #f8fafc;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscription Terms - Cast to TV: Screen Mirroring</title>
+<meta name="description" content="Subscription Terms for Cast to TV: Screen Mirroring. Learn about Premium subscriptions, free trials, billing, cancellation, and refunds.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338bdf8;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e8ecf1;--card:#eef1f5;--ink:#2b313b;--ink2:#4a5261;--muted:#8a93a2;--line:#d9dee5;
+--out:9px 9px 22px #c6cbd3,-9px -9px 22px #ffffff;--out-sm:5px 5px 12px #c9ced6,-5px -5px 12px #ffffff;
+--in:inset 5px 5px 10px #cbd0d8,inset -5px -5px 10px #ffffff;
+--green:#6dbb8c;--pink:#efb9c1;--yellow:#efcd6c;--orange:#ec9a50;--blue:#5aa3d6;--accent:#4f9a73}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:#dfe3e9;color:var(--ink);line-height:1.6;padding:28px;font-weight:400}
+a{color:inherit}
+.frame{max-width:1240px;margin:0 auto;background:var(--bg);border-radius:42px;padding:22px;box-shadow:14px 14px 36px #c3c8d0,-14px -14px 36px #f7f9fb}
+.neu{background:var(--card);border-radius:28px;box-shadow:var(--out)}
+.neu-sm{background:var(--card);border-radius:18px;box-shadow:var(--out-sm)}
+.inset{background:var(--bg);border-radius:18px;box-shadow:var(--in)}
+/* NAV */
+.topbar{display:flex;align-items:center;gap:18px;padding:12px 14px 12px 12px;border-radius:24px;background:var(--card);box-shadow:var(--out-sm);margin-bottom:24px}
+.round{width:44px;height:44px;flex-shrink:0;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--card);box-shadow:var(--out-sm);text-decoration:none;color:var(--ink);font-weight:600;font-size:17px;transition:box-shadow .25s}
+.round:hover{box-shadow:var(--in)}
+.round svg{width:20px;height:20px}
+.links{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+.links a{display:block;padding:8px 16px;border-radius:12px;font-size:14px;color:var(--ink2);text-decoration:none;transition:all .25s}
+.links a:hover{color:var(--ink)}
+.links a.active{box-shadow:var(--in);color:var(--ink);font-weight:500}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;padding:0 16px;height:44px;width:260px;border-radius:14px;background:var(--bg);box-shadow:var(--in)}
+.search svg{width:16px;height:16px;color:var(--muted);flex-shrink:0}
+.search input{border:0;background:transparent;outline:0;font:inherit;font-size:13px;color:var(--ink);width:100%}
+.search input::placeholder{color:var(--muted)}
+.wordmark{font-weight:300;font-size:30px;letter-spacing:.06em;color:var(--ink)}
+.wordmark b{font-weight:500}
+.kicker{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex-shrink:0}
+/* FOOTER */
+.foot{margin-top:24px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+.foot a{text-decoration:none;color:var(--ink2)}
+.foot a:hover{color:var(--ink)}
+@media(max-width:900px){body{padding:12px}.frame{padding:14px;border-radius:30px}.topbar{flex-wrap:wrap}.search{width:100%;order:5}}
+@media(max-width:640px){.topbar{gap:10px;padding:10px}.links{order:4;width:100%;justify-content:space-between;gap:0}.links a{padding:7px 9px;font-size:13px}.topbar>.round:last-of-type{margin-left:auto}}
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+.doc{display:grid;grid-template-columns:290px 1fr;gap:24px;align-items:start}
+.side{display:flex;flex-direction:column;gap:22px;position:sticky;top:20px}
+.side .neu{padding:24px}
+.docid{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:26px}
+.docid .round{width:40px;height:40px;border-radius:50%}
+.bignum{font-weight:300;font-size:38px;line-height:1;letter-spacing:.02em;text-align:right}
+.side h3{font-size:15px;font-weight:500;margin-bottom:14px}
+.toc{list-style:none;display:flex;flex-direction:column;gap:2px;max-height:52vh;overflow:auto;padding-right:4px}
+.toc a{display:flex;align-items:center;gap:12px;padding:8px 6px;border-radius:12px;font-size:12.5px;color:var(--ink2);text-decoration:none;transition:all .2s}
+.toc a:hover{box-shadow:var(--in)}
+.toc a span.t{flex:1;line-height:1.35}
+.toc a span.n{color:var(--muted);font-size:11px}
+.mail-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 16px;border-radius:14px;font-size:13px;text-decoration:none;color:var(--ink);box-shadow:var(--out-sm);transition:box-shadow .25s;word-break:break-all}
+.mail-btn:hover{box-shadow:var(--in)}
+.main{padding:40px 44px}
+.main .wordmark{font-size:26px;margin-bottom:26px}
+.main h1{font-weight:300;font-size:46px;line-height:1.1;letter-spacing:-.01em;margin-bottom:10px}
+.main .sub{font-size:15px;color:var(--ink2);margin-bottom:34px}
+.intro-box{padding:22px 26px;margin-bottom:28px;border-radius:22px;background:var(--bg);box-shadow:var(--in)}
+.intro-box p{font-size:14.5px;color:var(--ink2);margin:0 0 8px}
+.intro-box p:last-child{margin:0}
+.intro-box a{color:var(--accent)!important}
+.sec{padding:26px 28px;margin-bottom:22px;border-radius:24px;background:var(--card);box-shadow:var(--out-sm);scroll-margin-top:20px}
+.sec h2{font-size:18px;font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sec h2 .dot{width:9px;height:9px}
+.sec h3{font-size:15px;font-weight:500;margin:20px 0 10px;color:var(--ink)}
+.sec p{font-size:14.5px;color:var(--ink2);margin:0 0 12px}
+.sec p:last-child{margin-bottom:0}
+.sec ul,.sec ol{margin:10px 0 14px;padding-left:22px;color:var(--ink2);font-size:14.5px}
+.sec li{margin-bottom:8px}
+.sec strong,.sec .bold{color:var(--ink);font-weight:500}
+.sec a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.sec a:hover{border-bottom-color:var(--accent)}
+.highlight-box{margin:16px 0;padding:16px 20px;border-radius:16px;background:var(--bg);box-shadow:var(--in)}
+.highlight-box p,.highlight-box{font-size:14.5px;color:var(--ink2)}
+.highlight-box p{margin:0}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .amt{font-weight:300;font-size:34px;color:var(--ink);line-height:1}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin:18px 0 4px}
+.app-card{display:flex;align-items:center;gap:14px;padding:14px;border-radius:18px;background:var(--card);box-shadow:var(--out-sm);text-decoration:none!important;border:0!important;transition:box-shadow .25s}
+.app-card:hover{box-shadow:var(--in)}
+.app-card img{width:46px;height:46px;border-radius:13px;flex-shrink:0;box-shadow:3px 3px 8px #c6cbd3,-3px -3px 8px #fff}
+.app-card .n{display:block;color:var(--ink);font-weight:500;font-size:13.5px;line-height:1.3}
+.app-card .t{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:16px 0}
+.service-card{padding:18px;border-radius:18px;background:var(--bg);box-shadow:var(--in)}
+.service-card h4{font-size:14.5px;font-weight:500;margin-bottom:6px}
+.service-card p{font-size:13px!important;margin-bottom:8px!important}
+.back{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;padding:8px 14px;border-radius:12px;font-size:13px;color:var(--ink2);text-decoration:none;box-shadow:var(--out-sm)}
+.back:hover{box-shadow:var(--in)}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.side{position:static}.toc{max-height:none}.main{padding:26px 20px}.main h1{font-size:34px}.sec{padding:20px}}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                Roboto, Helvetica, Arial, sans-serif;
-            font-size: 9.5pt;
-            line-height: 1.5;
-            color: #334155;
-            margin: 0;
-            padding: 0;
-            background-color: #f8fafc;
-        }
-
-        .header {
-            background-color: #0f172a;
-            color: #ffffff;
-            margin: -16mm -14mm 20px -14mm;
-            padding: 24px 14mm 20px;
-            border-bottom: 3px solid #2563eb;
-        }
-
-        .header h1 {
-            font-size: 18pt;
-            font-weight: 700;
-            margin: 0 0 6px;
-            color: #ffffff;
-            letter-spacing: -0.02em;
-        }
-
-        .header .meta {
-            font-size: 8.5pt;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .intro {
-            font-size: 9.5pt;
-            color: #475569;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .section {
-            margin-bottom: 16px;
-            page-break-inside: avoid;
-        }
-
-        h2 {
-            font-size: 11pt;
-            font-weight: 700;
-            color: #0f172a;
-            margin: 0 0 8px;
-            padding-left: 8px;
-            border-left: 3.5px solid #2563eb;
-            page-break-after: avoid;
-        }
-
-        p {
-            margin: 0 0 8px;
-        }
-
-        ul, ol {
-            margin: 0 0 8px;
-            padding-left: 18px;
-        }
-
-        li {
-            margin-bottom: 4px;
-        }
-
-        .highlight-box {
-            background-color: #eff6ff;
-            border: 1px solid #bfdbfe;
-            border-radius: 6px;
-            padding: 10px 12px;
-            margin: 10px 0;
-        }
-
-        .warning-box {
-            background-color: #fef2f2;
-            border: 1px solid #fecaca;
-            border-radius: 6px;
-            padding: 10px 12px;
-            margin: 10px 0;
-            color: #991b1b;
-        }
-
-        .footer {
-            margin-top: 24px;
-            padding-top: 12px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 8pt;
-            color: #64748b;
-            text-align: center;
-        }
-
-        .bold {
-            font-weight: 600;
-            color: #0f172a;
-        }
-
-        a {
-            color: #2563eb;
-            overflow-wrap: anywhere;
-        }
-    </style>
+</style>
 </head>
 <body>
-
-    <div class="header">
-        <h1>Subscription Terms</h1>
-        <div class="meta">
-           Cast to TV: Screen Mirroring &bull; Published by Fa9ssa dev
-            &bull; Last Updated: October 17, 2026
-        </div>
+<div class="frame">
+<header class="topbar">
+  <a class="round" href="index.html" aria-label="Fa9Ssa DEV home">F</a>
+  <ul class="links"><li><a href="index.html">Home</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html" class="active">Terms</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <form class="search" action="index.html" method="get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" name="q" placeholder="Search apps"></form>
+  <a class="round" href="contact.html" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
+</header>
+<div class="doc">
+  <aside class="side">
+    <div class="neu">
+      <div class="docid"><span class="round" aria-hidden="true">F</span><div><div class="kicker" style="text-align:right">Subscription</div><div class="bignum">11</div></div></div>
+      <div class="kicker">Sections in this document</div>
     </div>
-
-    <div class="intro">
-        These Subscription Terms ("Terms") govern your purchase and use
-        of Premium subscription services offered through the AirPlay Cast
-        to TV application ("App"), published by Fa9ssa dev ("we", "us",
-        or "our"). By purchasing a subscription, you agree to these Terms.
+    <div class="neu">
+      <h3>On this page</h3>
+      <ul class="toc">
+      <li><a href="#s1"><span class="dot" style="background:var(--green)"></span><span class="t">Subscription Plan</span><span class="n">01</span></a></li>
+      <li><a href="#s2"><span class="dot" style="background:var(--pink)"></span><span class="t">Free Trial</span><span class="n">02</span></a></li>
+      <li><a href="#s3"><span class="dot" style="background:var(--yellow)"></span><span class="t">Premium Features</span><span class="n">03</span></a></li>
+      <li><a href="#s4"><span class="dot" style="background:var(--orange)"></span><span class="t">Billing and Automatic Renewal</span><span class="n">04</span></a></li>
+      <li><a href="#s5"><span class="dot" style="background:var(--blue)"></span><span class="t">How to Cancel</span><span class="n">05</span></a></li>
+      <li><a href="#s6"><span class="dot" style="background:var(--green)"></span><span class="t">Refunds</span><span class="n">06</span></a></li>
+      <li><a href="#s7"><span class="dot" style="background:var(--pink)"></span><span class="t">Price Changes</span><span class="n">07</span></a></li>
+      <li><a href="#s8"><span class="dot" style="background:var(--yellow)"></span><span class="t">Changes to These Terms</span><span class="n">08</span></a></li>
+      <li><a href="#s9"><span class="dot" style="background:var(--orange)"></span><span class="t">Account and Device Use</span><span class="n">09</span></a></li>
+      <li><a href="#s10"><span class="dot" style="background:var(--blue)"></span><span class="t">Service Availability and Liability</span><span class="n">10</span></a></li>
+      <li><a href="#s11"><span class="dot" style="background:var(--green)"></span><span class="t">Contact Us</span><span class="n">11</span></a></li>
+      </ul>
     </div>
-
-    <div class="section">
-        <h2>1. Subscription Plan</h2>
-        <p>We offer the following auto-renewable subscription plan:</p>
-
-        <div class="highlight-box">
-            <span class="bold">Premium Weekly</span> – $14.99 per week,
-            with an introductory 3-day free trial for eligible subscribers.
-        </div>
-
-        <p>
-            The final price and currency are displayed on the Google Play
-            purchase screen before you confirm your subscription. Prices
-            may vary by country or region.
-        </p>
+    <div class="neu">
+      <h3>Questions?</h3>
+      <p class="kicker" style="font-size:13px">Our team usually replies within 48 hours.</p>
+      <a class="mail-btn" href="mailto:support@fa9ssa.space"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg> support@fa9ssa.space</a>
     </div>
+  </aside>
+  <main class="main neu">
+    <div class="wordmark">Fa9<b>S</b>sa</div>
+    <h1>Subscription Terms</h1>
+    <p class="sub">Cast to TV: Screen Mirroring · Published by Fa9ssa dev · Last updated: October 17, 2026</p>
+<a class="back" href="terms.html">← All Terms</a>
+<div class="intro-box"><p>These Subscription Terms ("Terms") govern your purchase and use of Premium subscription services offered through the Cast to TV: Screen Mirroring application ("App"), published by Fa9ssa dev ("we", "us", or "our"). By purchasing a subscription, you agree to these Terms.</p></div>
+<section class="sec" id="s1">
+  <h2><span class="dot" style="background:var(--green)"></span>1. Subscription Plan</h2>
+  <p>We offer the following auto-renewable subscription plan:</p>
+  <div class="highlight-box"><div class="price"><span class="amt">$14.99</span><span class="bold">Premium Weekly</span></div><p style="margin-top:6px">per week, with an introductory 3-day free trial for eligible subscribers.</p></div>
+  <p>The final price and currency are displayed on the Google Play purchase screen before you confirm your subscription. Prices may vary by country or region.</p>
+</section>
+<section class="sec" id="s2">
+  <h2><span class="dot" style="background:var(--pink)"></span>2. Free Trial</h2>
+  <p>Eligible new subscribers may receive a 3-day free trial. During the trial, subscribers can access the Premium features included in their plan.</p>
+  <p>Unless the subscription is canceled before the trial ends, it automatically converts to a paid weekly subscription at the price displayed during purchase. The applicable charge will then be processed through Google Play.</p>
+  <p>Free-trial eligibility is determined by Google Play and may depend on your account and previous subscription history. If you are not eligible for a free trial, payment terms shown on the purchase screen will apply.</p>
+</section>
+<section class="sec" id="s3">
+  <h2><span class="dot" style="background:var(--yellow)"></span>3. Premium Features</h2>
+  <p>A Premium subscription may provide access to features such as:</p>
+  <ul><li>An ad-free experience within the App.</li><li>Additional casting and screen-mirroring features.</li><li>Access to designated Premium functionality as provided in the App.</li></ul>
+  <p>Available features depend on the current App version and device compatibility. Casting functionality may require a compatible TV or receiver and a suitable network connection. We do not guarantee compatibility with every device or TV.</p>
+</section>
+<section class="sec" id="s4">
+  <h2><span class="dot" style="background:var(--orange)"></span>4. Billing and Automatic Renewal</h2>
+  <p>Subscriptions are purchased and managed through Google Play.</p>
+  <ul><li>Any applicable payment is charged to your Google Play account.</li><li>After the free trial, the subscription renews automatically every week unless canceled.</li><li>The renewal price is the price displayed by Google Play for your subscription.</li><li>Google Play handles billing, payment methods, and subscription renewals.</li></ul>
+</section>
+<section class="sec" id="s5">
+  <h2><span class="dot" style="background:var(--blue)"></span>5. How to Cancel</h2>
+  <p>You can cancel your subscription through Google Play:</p>
+  <ol><li>Open the Google Play Store app.</li><li>Tap your profile icon.</li><li>Select Payments &amp; subscriptions, then Subscriptions.</li><li>Select Cast to TV: Screen Mirroring and follow the cancellation instructions.</li></ol>
+  <p>Uninstalling the App does not cancel your subscription. After cancellation, access to paid Premium features generally remains available until the end of the applicable access period, subject to the terms shown by Google Play.</p>
+</section>
+<section class="sec" id="s6">
+  <h2><span class="dot" style="background:var(--green)"></span>6. Refunds</h2>
+  <p>Payments and refund requests are subject to applicable law and Google Play's refund policies. To request a refund, consult Google Play's help resources or contact Google Play Support. Nothing in these Terms excludes consumer rights that cannot legally be excluded.</p>
+</section>
+<section class="sec" id="s7">
+  <h2><span class="dot" style="background:var(--pink)"></span>7. Price Changes</h2>
+  <p>Subscription prices may change from time to time. Where required, Google Play will provide applicable notices and request any necessary consent. Changes to subscription pricing are handled in accordance with Google Play policies and applicable law.</p>
+</section>
+<section class="sec" id="s8">
+  <h2><span class="dot" style="background:var(--yellow)"></span>8. Changes to These Terms</h2>
+  <p>We may update these Terms to reflect changes to the App, our services, or applicable requirements. The updated Terms will be published with a revised date. Where required by law, additional notice or consent will be provided.</p>
+</section>
+<section class="sec" id="s9">
+  <h2><span class="dot" style="background:var(--orange)"></span>9. Account and Device Use</h2>
+  <p>Subscription access is managed through Google Play and is subject to the applicable account and device restrictions. You may need to use the Google account associated with the purchase to restore or manage your subscription.</p>
+</section>
+<section class="sec" id="s10">
+  <h2><span class="dot" style="background:var(--blue)"></span>10. Service Availability and Liability</h2>
+  <p>We aim to keep the App available and functional, but we cannot guarantee uninterrupted operation or compatibility with every device, television, or network. Features may change as the App is updated. Nothing in these Terms limits liability where such limitation is prohibited by law.</p>
+</section>
+<section class="sec" id="s11">
+  <h2><span class="dot" style="background:var(--green)"></span>11. Contact Us</h2>
+  <p>For questions about these Terms or the App, contact us through the developer contact details listed on the Cast to TV: Screen Mirroring Google Play Store page, or by email at <a href="mailto:support@fa9ssa.space">support@fa9ssa.space</a>.</p>
+</section>
 
-    <div class="section">
-        <h2>2. Free Trial</h2>
-        <p>
-            Eligible new subscribers may receive a 3-day free trial.
-            During the trial, subscribers can access the Premium features
-            included in their plan.
-        </p>
-        <p>
-            Unless the subscription is canceled before the trial ends,
-            it automatically converts to a paid weekly subscription at
-            the price displayed during purchase. The applicable charge
-            will then be processed through Google Play.
-        </p>
-        <p>
-            Free-trial eligibility is determined by Google Play and may
-            depend on your account and previous subscription history.
-            If you are not eligible for a free trial, payment terms shown
-            on the purchase screen will apply.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>3. Premium Features</h2>
-        <p>A Premium subscription may provide access to features such as:</p>
-        <ul>
-            <li>An ad-free experience within the App.</li>
-            <li>Additional casting and screen-mirroring features.</li>
-            <li>Access to designated Premium functionality as provided in the App.</li>
-        </ul>
-        <p>
-            Available features depend on the current App version and
-            device compatibility. Casting functionality may require a
-            compatible TV or receiver and a suitable network connection.
-            We do not guarantee compatibility with every device or TV.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>4. Billing and Automatic Renewal</h2>
-        <p>
-            Subscriptions are purchased and managed through Google Play.
-        </p>
-        <ul>
-            <li>Any applicable payment is charged to your Google Play account.</li>
-            <li>After the free trial, the subscription renews automatically every week unless canceled.</li>
-            <li>The renewal price is the price displayed by Google Play for your subscription.</li>
-            <li>Google Play handles billing, payment methods, and subscription renewals.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>5. How to Cancel</h2>
-        <p>You can cancel your subscription through Google Play:</p>
-        <ol>
-            <li>Open the Google Play Store app.</li>
-            <li>Tap your profile icon.</li>
-            <li>Select Payments &amp; subscriptions, then Subscriptions.</li>
-            <li>Select AirPlay Cast to TV and follow the cancellation instructions.</li>
-        </ol>
-        <p>
-            Uninstalling the App does not cancel your subscription.
-            After cancellation, access to paid Premium features generally
-            remains available until the end of the applicable access period,
-            subject to the terms shown by Google Play.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>6. Refunds</h2>
-        <p>
-            Payments and refund requests are subject to applicable law
-            and Google Play's refund policies. To request a refund,
-            consult Google Play's help resources or contact Google Play
-            Support. Nothing in these Terms excludes consumer rights
-            that cannot legally be excluded.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>7. Price Changes</h2>
-        <p>
-            Subscription prices may change from time to time. Where
-            required, Google Play will provide applicable notices and
-            request any necessary consent. Changes to subscription
-            pricing are handled in accordance with Google Play policies
-            and applicable law.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>8. Changes to These Terms</h2>
-        <p>
-            We may update these Terms to reflect changes to the App,
-            our services, or applicable requirements. The updated Terms
-            will be published with a revised date. Where required by law,
-            additional notice or consent will be provided.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>9. Account and Device Use</h2>
-        <p>
-            Subscription access is managed through Google Play and is
-            subject to the applicable account and device restrictions.
-            You may need to use the Google account associated with the
-            purchase to restore or manage your subscription.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>10. Service Availability and Liability</h2>
-        <p>
-            We aim to keep the App available and functional, but we
-            cannot guarantee uninterrupted operation or compatibility
-            with every device, television, or network. Features may
-            change as the App is updated. Nothing in these Terms limits
-            liability where such limitation is prohibited by law.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>11. Contact Us</h2>
-        <p>
-            For questions about these Terms or the App, contact us
-            through the developer contact details listed on the
-            AirPlay Cast to TV Google Play Store page.
-        </p>
-    </div>
-
-    <div class="footer">
-        &copy; 2026 Fa9ssa dev. All rights reserved.
-    </div>
-
+  </main>
+</div>
+<footer class="foot neu">
+  <span>© 2026 Fa9Ssa DEV – All rights reserved</span>
+  <nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+</footer>
+</div>
 </body>
 </html>
-```

@@ -2,183 +2,252 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Terms of Use - Fa9Ssa DEV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Favicon -->
+<title>Terms of Use - Fa9Ssa DEV</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338bdf8;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#0f172a;color:#fff;line-height:1.7}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(2,6,23,0.95);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;box-shadow:0 4px 6px rgba(0,0,0,0.3)}
-nav h2{margin:0;font-size:22px;font-weight:700}
-nav ul{list-style:none;display:flex;gap:25px;margin:0;padding:0}
-nav a{color:#e5e7eb;text-decoration:none;font-size:15px;transition:color 0.3s}
-nav a:hover,nav a.active{color:#38bdf8}
-.cover{height:280px;background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 50%,#38bdf8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:0 20px}
-.cover::before{content:'';position:absolute;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.1) 1px,transparent 1px);background-size:50px 50px;animation:slide 20s linear infinite}
-@keyframes slide{0%{transform:translate(0,0)}100%{transform:translate(50px,50px)}}
-.cover h1{font-size:38px;margin:0 0 8px 0;position:relative;z-index:1}
-.cover p{font-size:16px;margin:0;opacity:0.9;position:relative;z-index:1;color:#e0f2fe}
-.content{max-width:900px;margin:50px auto;padding:0 40px 60px 40px}
-.intro-box{background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(56,189,248,0.15));border:2px solid rgba(56,189,248,0.3);border-radius:16px;padding:25px 30px;margin-bottom:40px;box-shadow:0 8px 32px rgba(0,0,0,0.3)}
-.intro-box p{margin:0 0 10px 0;font-size:15px;color:#cbd5e1}
+:root{--bg:#e8ecf1;--card:#eef1f5;--ink:#2b313b;--ink2:#4a5261;--muted:#8a93a2;--line:#d9dee5;
+--out:9px 9px 22px #c6cbd3,-9px -9px 22px #ffffff;--out-sm:5px 5px 12px #c9ced6,-5px -5px 12px #ffffff;
+--in:inset 5px 5px 10px #cbd0d8,inset -5px -5px 10px #ffffff;
+--green:#6dbb8c;--pink:#efb9c1;--yellow:#efcd6c;--orange:#ec9a50;--blue:#5aa3d6;--accent:#4f9a73}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:#dfe3e9;color:var(--ink);line-height:1.6;padding:28px;font-weight:400}
+a{color:inherit}
+.frame{max-width:1240px;margin:0 auto;background:var(--bg);border-radius:42px;padding:22px;box-shadow:14px 14px 36px #c3c8d0,-14px -14px 36px #f7f9fb}
+.neu{background:var(--card);border-radius:28px;box-shadow:var(--out)}
+.neu-sm{background:var(--card);border-radius:18px;box-shadow:var(--out-sm)}
+.inset{background:var(--bg);border-radius:18px;box-shadow:var(--in)}
+/* NAV */
+.topbar{display:flex;align-items:center;gap:18px;padding:12px 14px 12px 12px;border-radius:24px;background:var(--card);box-shadow:var(--out-sm);margin-bottom:24px}
+.round{width:44px;height:44px;flex-shrink:0;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--card);box-shadow:var(--out-sm);text-decoration:none;color:var(--ink);font-weight:600;font-size:17px;transition:box-shadow .25s}
+.round:hover{box-shadow:var(--in)}
+.round svg{width:20px;height:20px}
+.links{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+.links a{display:block;padding:8px 16px;border-radius:12px;font-size:14px;color:var(--ink2);text-decoration:none;transition:all .25s}
+.links a:hover{color:var(--ink)}
+.links a.active{box-shadow:var(--in);color:var(--ink);font-weight:500}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;padding:0 16px;height:44px;width:260px;border-radius:14px;background:var(--bg);box-shadow:var(--in)}
+.search svg{width:16px;height:16px;color:var(--muted);flex-shrink:0}
+.search input{border:0;background:transparent;outline:0;font:inherit;font-size:13px;color:var(--ink);width:100%}
+.search input::placeholder{color:var(--muted)}
+.wordmark{font-weight:300;font-size:30px;letter-spacing:.06em;color:var(--ink)}
+.wordmark b{font-weight:500}
+.kicker{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex-shrink:0}
+/* FOOTER */
+.foot{margin-top:24px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+.foot a{text-decoration:none;color:var(--ink2)}
+.foot a:hover{color:var(--ink)}
+@media(max-width:900px){body{padding:12px}.frame{padding:14px;border-radius:30px}.topbar{flex-wrap:wrap}.search{width:100%;order:5}}
+@media(max-width:640px){.topbar{gap:10px;padding:10px}.links{order:4;width:100%;justify-content:space-between;gap:0}.links a{padding:7px 9px;font-size:13px}.topbar>.round:last-of-type{margin-left:auto}}
+
+.doc{display:grid;grid-template-columns:290px 1fr;gap:24px;align-items:start}
+.side{display:flex;flex-direction:column;gap:22px;position:sticky;top:20px}
+.side .neu{padding:24px}
+.docid{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:26px}
+.docid .round{width:40px;height:40px;border-radius:50%}
+.bignum{font-weight:300;font-size:38px;line-height:1;letter-spacing:.02em;text-align:right}
+.side h3{font-size:15px;font-weight:500;margin-bottom:14px}
+.toc{list-style:none;display:flex;flex-direction:column;gap:2px;max-height:52vh;overflow:auto;padding-right:4px}
+.toc a{display:flex;align-items:center;gap:12px;padding:8px 6px;border-radius:12px;font-size:12.5px;color:var(--ink2);text-decoration:none;transition:all .2s}
+.toc a:hover{box-shadow:var(--in)}
+.toc a span.t{flex:1;line-height:1.35}
+.toc a span.n{color:var(--muted);font-size:11px}
+.mail-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 16px;border-radius:14px;font-size:13px;text-decoration:none;color:var(--ink);box-shadow:var(--out-sm);transition:box-shadow .25s;word-break:break-all}
+.mail-btn:hover{box-shadow:var(--in)}
+.main{padding:40px 44px}
+.main .wordmark{font-size:26px;margin-bottom:26px}
+.main h1{font-weight:300;font-size:46px;line-height:1.1;letter-spacing:-.01em;margin-bottom:10px}
+.main .sub{font-size:15px;color:var(--ink2);margin-bottom:34px}
+.intro-box{padding:22px 26px;margin-bottom:28px;border-radius:22px;background:var(--bg);box-shadow:var(--in)}
+.intro-box p{font-size:14.5px;color:var(--ink2);margin:0 0 8px}
 .intro-box p:last-child{margin:0}
-.section{background:#1e293b;border-radius:16px;padding:30px;margin-bottom:25px;border-left:4px solid #38bdf8;transition:all 0.3s}
-.section:hover{box-shadow:0 8px 24px rgba(0,0,0,0.4);transform:translateX(4px)}
-.section h2{color:#38bdf8;font-size:24px;margin:0 0 20px 0;display:flex;align-items:center;gap:10px}
-.section h2::before{content:'';width:6px;height:6px;background:#38bdf8;border-radius:50%;box-shadow:0 0 10px #38bdf8;flex-shrink:0}
-.section p{color:#cbd5e1;margin:0 0 15px 0;font-size:15px}
-.section p:last-child{margin-bottom:0}
-.section ul{margin:15px 0;padding-left:25px;color:#cbd5e1}
-.section li{margin-bottom:10px;font-size:15px}
-.section strong{color:#e0f2fe;font-weight:600}
-.section a{color:#38bdf8;text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.3s}
-.section a:hover{border-bottom-color:#38bdf8}
-.highlight-box{background:rgba(56,189,248,0.1);border-left:3px solid #38bdf8;padding:15px 20px;margin:20px 0;border-radius:8px}
+.intro-box a{color:var(--accent)!important}
+.sec{padding:26px 28px;margin-bottom:22px;border-radius:24px;background:var(--card);box-shadow:var(--out-sm);scroll-margin-top:20px}
+.sec h2{font-size:18px;font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sec h2 .dot{width:9px;height:9px}
+.sec h3{font-size:15px;font-weight:500;margin:20px 0 10px;color:var(--ink)}
+.sec p{font-size:14.5px;color:var(--ink2);margin:0 0 12px}
+.sec p:last-child{margin-bottom:0}
+.sec ul,.sec ol{margin:10px 0 14px;padding-left:22px;color:var(--ink2);font-size:14.5px}
+.sec li{margin-bottom:8px}
+.sec strong,.sec .bold{color:var(--ink);font-weight:500}
+.sec a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.sec a:hover{border-bottom-color:var(--accent)}
+.highlight-box{margin:16px 0;padding:16px 20px;border-radius:16px;background:var(--bg);box-shadow:var(--in)}
+.highlight-box p,.highlight-box{font-size:14.5px;color:var(--ink2)}
 .highlight-box p{margin:0}
-.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;margin:20px 0 5px 0}
-.app-card{display:flex;align-items:center;gap:14px;background:rgba(15,23,42,0.5);padding:14px;border-radius:12px;border:1px solid rgba(56,189,248,0.2);transition:all 0.3s;text-decoration:none!important;border-bottom:1px solid rgba(56,189,248,0.2)!important}
-.app-card:hover{border-color:#38bdf8!important;background:rgba(15,23,42,0.85);transform:translateY(-2px)}
-.app-card img{width:48px;height:48px;border-radius:12px;flex-shrink:0;background:#0f172a}
-.app-card span{display:block}
-.app-card .n{color:#f8fafc;font-weight:600;font-size:15px;line-height:1.3}
-.app-card .t{color:#38bdf8;font-size:13px}
-.back{display:inline-block;margin-bottom:25px;color:#38bdf8;text-decoration:none;font-size:15px}
-.back:hover{text-decoration:underline}
-footer{text-align:center;padding:30px;font-size:14px;color:#94a3b8;background:#020617;border-top:1px solid #1e293b}
-footer a{color:#94a3b8;text-decoration:none;margin:0 8px}
-footer a:hover{color:#38bdf8}
-@media(max-width:768px){nav{padding:16px 20px;flex-wrap:wrap;gap:10px}nav ul{gap:15px;font-size:14px;flex-wrap:wrap}.cover{height:240px}.cover h1{font-size:28px}.content{padding:0 20px 40px 20px}.section{padding:20px}.app-grid{grid-template-columns:1fr}}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .amt{font-weight:300;font-size:34px;color:var(--ink);line-height:1}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin:18px 0 4px}
+.app-card{display:flex;align-items:center;gap:14px;padding:14px;border-radius:18px;background:var(--card);box-shadow:var(--out-sm);text-decoration:none!important;border:0!important;transition:box-shadow .25s}
+.app-card:hover{box-shadow:var(--in)}
+.app-card img{width:46px;height:46px;border-radius:13px;flex-shrink:0;box-shadow:3px 3px 8px #c6cbd3,-3px -3px 8px #fff}
+.app-card .n{display:block;color:var(--ink);font-weight:500;font-size:13.5px;line-height:1.3}
+.app-card .t{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:16px 0}
+.service-card{padding:18px;border-radius:18px;background:var(--bg);box-shadow:var(--in)}
+.service-card h4{font-size:14.5px;font-weight:500;margin-bottom:6px}
+.service-card p{font-size:13px!important;margin-bottom:8px!important}
+.back{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;padding:8px 14px;border-radius:12px;font-size:13px;color:var(--ink2);text-decoration:none;box-shadow:var(--out-sm)}
+.back:hover{box-shadow:var(--in)}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.side{position:static}.toc{max-height:none}.main{padding:26px 20px}.main h1{font-size:34px}.sec{padding:20px}}
+
 </style>
 </head>
 <body>
-
-<!-- NAVBAR -->
-<nav>
-  <h2>📱 Fa9Ssa DEV</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="terms.html" class="active">Terms</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- COVER -->
-<section class="cover">
-  <h1>Terms of Use</h1>
-  <p>Last updated: November 10, 2026</p>
-</section>
-
-<div class="content">
+<div class="frame">
+<header class="topbar">
+  <a class="round" href="index.html" aria-label="Fa9Ssa DEV home">F</a>
+  <ul class="links"><li><a href="index.html">Home</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html" class="active">Terms</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <form class="search" action="index.html" method="get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" name="q" placeholder="Search apps"></form>
+  <a class="round" href="contact.html" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
+</header>
+<div class="doc">
+  <aside class="side">
+    <div class="neu">
+      <div class="docid"><span class="round" aria-hidden="true">F</span><div><div class="kicker" style="text-align:right">Terms of Use</div><div class="bignum">15</div></div></div>
+      <div class="kicker">Sections in this document</div>
+    </div>
+    <div class="neu">
+      <h3>On this page</h3>
+      <ul class="toc">
+      <li><a href="#s1"><span class="dot" style="background:var(--green)"></span><span class="t">Terms for Each App</span><span class="n">01</span></a></li>
+      <li><a href="#s2"><span class="dot" style="background:var(--pink)"></span><span class="t">Acceptance of Terms</span><span class="n">02</span></a></li>
+      <li><a href="#s3"><span class="dot" style="background:var(--yellow)"></span><span class="t">License</span><span class="n">03</span></a></li>
+      <li><a href="#s4"><span class="dot" style="background:var(--orange)"></span><span class="t">Acceptable Use</span><span class="n">04</span></a></li>
+      <li><a href="#s5"><span class="dot" style="background:var(--blue)"></span><span class="t">Device Permissions</span><span class="n">05</span></a></li>
+      <li><a href="#s6"><span class="dot" style="background:var(--green)"></span><span class="t">Advertising</span><span class="n">06</span></a></li>
+      <li><a href="#s7"><span class="dot" style="background:var(--pink)"></span><span class="t">In-App Purchases &amp; Subscriptions</span><span class="n">07</span></a></li>
+      <li><a href="#s8"><span class="dot" style="background:var(--yellow)"></span><span class="t">Third-Party Services &amp; Trademarks</span><span class="n">08</span></a></li>
+      <li><a href="#s9"><span class="dot" style="background:var(--orange)"></span><span class="t">Intellectual Property</span><span class="n">09</span></a></li>
+      <li><a href="#s10"><span class="dot" style="background:var(--blue)"></span><span class="t">Disclaimer of Warranties</span><span class="n">10</span></a></li>
+      <li><a href="#s11"><span class="dot" style="background:var(--green)"></span><span class="t">Limitation of Liability</span><span class="n">11</span></a></li>
+      <li><a href="#s12"><span class="dot" style="background:var(--pink)"></span><span class="t">Termination</span><span class="n">12</span></a></li>
+      <li><a href="#s13"><span class="dot" style="background:var(--yellow)"></span><span class="t">Changes to These Terms</span><span class="n">13</span></a></li>
+      <li><a href="#s14"><span class="dot" style="background:var(--orange)"></span><span class="t">Governing Law</span><span class="n">14</span></a></li>
+      <li><a href="#s15"><span class="dot" style="background:var(--blue)"></span><span class="t">Contact Us</span><span class="n">15</span></a></li>
+      </ul>
+    </div>
+    <div class="neu">
+      <h3>Questions?</h3>
+      <p class="kicker" style="font-size:13px">Our team usually replies within 48 hours.</p>
+      <a class="mail-btn" href="mailto:support@fa9ssa.space"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg> support@fa9ssa.space</a>
+    </div>
+  </aside>
+  <main class="main neu">
+    <div class="wordmark">Fa9<b>S</b>sa</div>
+    <h1>Terms of Use</h1>
+    <p class="sub">Last updated: November 10, 2026</p>
 <div class="intro-box">
   <p><strong>Last updated:</strong> November 10, 2026</p>
   <p>Welcome to Fa9Ssa DEV. These general Terms of Use govern your use of our website <strong>fa9ssa.space</strong> and all Android applications we publish on Google Play (the “Apps”). Each App may also have its own specific terms, listed below. If there is a conflict, the App-specific terms apply to that App.</p>
 </div>
-<div class="section">
-  <h2>Terms for Each App</h2>
+<section class="sec" id="s1">
+  <h2><span class="dot" style="background:var(--green)"></span>Terms for Each App</h2>
   <p>Select an app to read its specific Terms of Use:</p>
   <div class="app-grid">
-    <a class="app-card" href="terms-carlink.html"><img src="img/carlink.png" alt="CarLink" loading="lazy"><span><span class="n">CarLink</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-wifi-info.html"><img src="img/wifi.png" alt="Connected Wifi Info" loading="lazy"><span><span class="n">Connected Wifi Info</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-ps-controller.html"><img src="img/ps.png" alt="Ps Controller" loading="lazy"><span><span class="n">Ps Controller</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-bluetooth-finder.html"><img src="img/bluetooth.png" alt="Bluetooth Tracker &amp; Finder" loading="lazy"><span><span class="n">Bluetooth Tracker &amp; Finder</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-watch-finder.html"><img src="img/watch.png" alt="Watch Finder &amp; Connect" loading="lazy"><span><span class="n">Watch Finder &amp; Connect</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-reverse-audio.html"><img src="img/reverseaudio.png" alt="Reverse Audio – Reverse Singing" loading="lazy"><span><span class="n">Reverse Audio – Reverse Singing</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="subscription-terms.html"><img src="img/endoscope.png" alt="Camera Endoscope" loading="lazy"><span><span class="n">Camera Endoscope</span><span class="t">Subscription Terms →</span></span></a>
-    <a class="app-card" href="terms-smarttag.html"><img src="img/smarttag.png" alt="SmartTag – AirTag Detector" loading="lazy"><span><span class="n">SmartTag – AirTag Detector</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-xb-controller.html"><img src="img/xbox.png" alt="XB Game Controller" loading="lazy"><span><span class="n">XB Game Controller</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="subscription-cast.html"><img src="img/smartcast.png" alt="Smart Cast: Wireless Display" loading="lazy"><span><span class="n">Smart Cast: Wireless Display</span><span class="t">Terms of Use →</span></span></a>
-    <a class="app-card" href="terms-voice-control.html"><img src="img/voice.png" alt="Control Phone Voice" loading="lazy"><span><span class="n">Control Phone Voice</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-carlink.html"><img src="https://play-lh.googleusercontent.com/Gt_cEQ5VHnhTfIsrglh8bkJWzABkqomBigr5Motu3XRD89IUFCo4d4iwA0w7Val0asfqde89F773ofxnSsoA=s256-rw" alt="MirrorLink - Car Screen" loading="lazy"><span><span class="n">MirrorLink - Car Screen</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-wifi-info.html"><img src="https://play-lh.googleusercontent.com/pyUYtvKFYDPmNuMquNdcRLmxC6Miy9BdGeBvoC8C5YEhBFIhtRkRcUF5AdFp3cM0BMfd7f5klN9hHiGDTlwaALQ=s256-rw" alt="Connected Wifi Info" loading="lazy"><span><span class="n">Connected Wifi Info</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-ps-controller.html"><img src="https://play-lh.googleusercontent.com/lX3iFi5RVwXmjyR3W9yjT_YHD6wCDEp5u39PmIv67OkAa9kO-w5kY7jGXdg3mXTOBAFI4t6taItVSrQKSI4lSQ=s256-rw" alt="Remote Gamepad: Console Play" loading="lazy"><span><span class="n">Remote Gamepad: Console Play</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-bluetooth-finder.html"><img src="https://play-lh.googleusercontent.com/SNZa4O1qxVqn2OU9hmR1PsNuP2pLx6qrWdroH3_Q2qMPfs_NizoQxshTvZm72-KppJ0AyPx2q_ETq4itcGCTpA=s256-rw" alt="Find My Bluetooth Device" loading="lazy"><span><span class="n">Find My Bluetooth Device</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-watch-finder.html"><img src="https://play-lh.googleusercontent.com/ukZLU45gTLQXMM1fnmovM3QsjGf7u5t4h89Q2fAo7sNID2_-Saq-fsUOSB5QqCYb5eUrUHR5BeigqC7x6_XLpw=s256-rw" alt="Bluetooth Auto Connect" loading="lazy"><span><span class="n">Bluetooth Auto Connect</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-reverse-audio.html"><img src="https://play-lh.googleusercontent.com/t-6tpvZuxF_ZdT61U2Y3oWozt2HM_Z0t6XM5w8G8X-eVmGOdtzsxzFwAI2bwdaHE8JH4Q6Y7KSiV9RTWjNoEPA=s256-rw" alt="Reverse Audio – Reverse Singing" loading="lazy"><span><span class="n">Reverse Audio – Reverse Singing</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="subscription-terms.html"><img src="https://play-lh.googleusercontent.com/97VUZ2HC54ikTFqcfiNTEtbC7Ln9bclMA_Zm875kSIJecK46QdXCi-2GIUMJLGn9yEgmZ2RnxY5A-UFJlxSx=s256-rw" alt="Camera endoscope" loading="lazy"><span><span class="n">Camera endoscope</span><span class="t">Subscription Terms →</span></span></a>
+    <a class="app-card" href="terms-smarttag.html"><img src="https://play-lh.googleusercontent.com/niRWWLqQ4xvaWJe5u8qMfebTkvYrhVcEq1fHdTiV0jNp80qZqCSTuvviik-2kPTtW0gsnftwhZgvBWETA0kfcg=s256-rw" alt="Tracker Detector &amp; Tag Finder" loading="lazy"><span><span class="n">Tracker Detector &amp; Tag Finder</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-xb-controller.html"><img src="https://play-lh.googleusercontent.com/94R_6_qcXrBVFEpFCx1Z4jK4mPGBf8HAsHpvOmKjxJrybr2WoYN0i-xedZHjq6zRrNK644ZfHXTuJVFlBBaYNA=s256-rw" alt="Virtual Remote Gamepad Touch" loading="lazy"><span><span class="n">Virtual Remote Gamepad Touch</span><span class="t">Terms of Use →</span></span></a>
+    <a class="app-card" href="terms-smart-cast.html"><img src="https://play-lh.googleusercontent.com/2sTyfb7NyUBROna7joL6ECLTG_v4qMAzg8_1DrMZsK54kaj9KYCjG_LsG7XGtIQMYbsiG1upLWY2Fz8biQQG=s256-rw" alt="Cast to TV: Screen Mirroring" loading="lazy"><span><span class="n">Cast to TV: Screen Mirroring</span><span class="t">Terms of Use →</span></span></a>
   </div>
-</div>
+</section>
 
-<div class="section">
-  <h2>1. Acceptance of Terms</h2>
+<section class="sec" id="s2">
+  <h2><span class="dot" style="background:var(--pink)"></span>1. Acceptance of Terms</h2>
   <p>By accessing our website or downloading, installing or using any of our Apps, you agree to be bound by these Terms and by our <a href="privacy.html">Privacy Policy</a>. If you do not agree, please do not use our website or Apps.</p>
   <p>You must be old enough to form a binding agreement in your country, or have the permission of a parent or legal guardian, to use our Apps.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>2. License</h2>
+<section class="sec" id="s3">
+  <h2><span class="dot" style="background:var(--yellow)"></span>2. License</h2>
   <p>Subject to these Terms, we grant you a limited, personal, non-exclusive, non-transferable and revocable license to install and use our Apps on Android devices you own or control, for personal and non-commercial purposes.</p>
   <p>All rights not expressly granted to you are reserved by Fa9Ssa DEV.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>3. Acceptable Use</h2>
+<section class="sec" id="s4">
+  <h2><span class="dot" style="background:var(--orange)"></span>3. Acceptable Use</h2>
   <p>When using our website or Apps, you agree not to:</p>
   <ul><li>Use the Apps for any illegal purpose or in violation of any applicable law or regulation;</li><li>Copy, modify, decompile, reverse engineer, disassemble or create derivative works of the Apps;</li><li>Resell, rent, sublicense or redistribute the Apps or any part of them;</li><li>Use the Apps to track, monitor, record or harm other people without their consent;</li><li>Access networks, devices or data that you are not authorized to access;</li><li>Interfere with ads, attempt to generate fraudulent ad clicks or impressions, or bypass in-app purchases;</li><li>Attempt to disrupt, damage or overload our services or servers.</li></ul>
-</div>
+</section>
 
-<div class="section">
-  <h2>4. Device Permissions</h2>
+<section class="sec" id="s5">
+  <h2><span class="dot" style="background:var(--blue)"></span>4. Device Permissions</h2>
   <p>Some Apps request device permissions (for example Bluetooth, location, microphone, camera, nearby devices or Accessibility Service) that are necessary for their main features. Permissions are only used to provide the features you choose to use. You can manage or revoke permissions at any time in your Android settings; some features may stop working if you do.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>5. Advertising</h2>
+<section class="sec" id="s6">
+  <h2><span class="dot" style="background:var(--green)"></span>5. Advertising</h2>
   <p>Most of our Apps are free and supported by advertising provided by third parties such as <strong>Google AdMob</strong>. Ad partners may collect and use device identifiers and usage data to show and measure ads, in accordance with their own policies and our <a href="privacy.html">Privacy Policy</a>.</p>
   <p>We are not responsible for the content of third-party ads or for any products or services advertised by third parties.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>6. In-App Purchases & Subscriptions</h2>
+<section class="sec" id="s7">
+  <h2><span class="dot" style="background:var(--pink)"></span>6. In-App Purchases & Subscriptions</h2>
   <p>Some Apps offer optional paid features, such as removing ads or unlocking premium tools, as one-time purchases or subscriptions. All payments are processed by <strong>Google Play</strong> and are subject to the Google Play Terms of Service.</p>
   <ul><li>Prices and what is included are shown before you confirm a purchase.</li><li>Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period. You can manage or cancel subscriptions in the Google Play Store app under <em>Payments &amp; subscriptions</em>.</li><li>Refunds are handled according to Google Play's refund policy. Uninstalling an App does not cancel an active subscription.</li></ul>
-  <p>App-specific subscription details (for example <a href="subscription-terms.html">Camera Endoscope Subscription Terms</a>) are provided on that App's terms page.</p>
-</div>
+  <p>App-specific subscription details are provided on separate pages: <a href="subscription-terms.html">Camera endoscope Subscription Terms</a> and <a href="subscription-cast.html">Cast to TV Subscription Terms</a>.</p>
+</section>
 
-<div class="section">
-  <h2>7. Third-Party Services & Trademarks</h2>
+<section class="sec" id="s8">
+  <h2><span class="dot" style="background:var(--yellow)"></span>7. Third-Party Services & Trademarks</h2>
   <p>Our Apps may rely on or interact with third-party hardware, software and services (such as Google Play services, Bluetooth accessories, TVs, cars, game consoles or tracking tags). Those third parties have their own terms and we are not responsible for their availability or behaviour.</p>
   <div class="highlight-box"><p>Our Apps are independent products and are <strong>not affiliated with, endorsed by or sponsored by</strong> Sony, Microsoft, Apple, Samsung, Google or any other brand mentioned on our website or in our Apps. All trademarks, product names and logos belong to their respective owners and are used only to describe compatibility.</p></div>
-</div>
+</section>
 
-<div class="section">
-  <h2>8. Intellectual Property</h2>
+<section class="sec" id="s9">
+  <h2><span class="dot" style="background:var(--orange)"></span>8. Intellectual Property</h2>
   <p>The Apps, website, design, code, graphics, icons and text are owned by Fa9Ssa DEV or its licensors and are protected by intellectual property laws. Content you create with our Apps (such as recordings) remains yours, and you are responsible for it.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>9. Disclaimer of Warranties</h2>
+<section class="sec" id="s10">
+  <h2><span class="dot" style="background:var(--blue)"></span>9. Disclaimer of Warranties</h2>
   <p>Our website and Apps are provided <strong>“as is” and “as available”</strong>, without warranties of any kind, express or implied, including fitness for a particular purpose, accuracy or non-infringement. We do not guarantee that the Apps will be error-free, uninterrupted, compatible with every device, or that results (such as device locations, detections or measurements) will be accurate.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>10. Limitation of Liability</h2>
+<section class="sec" id="s11">
+  <h2><span class="dot" style="background:var(--green)"></span>10. Limitation of Liability</h2>
   <p>To the maximum extent permitted by law, Fa9Ssa DEV shall not be liable for any indirect, incidental, special, consequential or punitive damages, or for any loss of data, profits, devices or goodwill, arising out of or related to your use of, or inability to use, our website or Apps.</p>
   <p>Nothing in these Terms excludes or limits any liability or consumer rights that cannot be excluded or limited under applicable law.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>11. Termination</h2>
+<section class="sec" id="s12">
+  <h2><span class="dot" style="background:var(--pink)"></span>11. Termination</h2>
   <p>We may suspend or terminate your access to any App at any time if you violate these Terms. You may stop using our Apps at any time by uninstalling them. Sections that by their nature should survive termination will remain in effect.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>12. Changes to These Terms</h2>
+<section class="sec" id="s13">
+  <h2><span class="dot" style="background:var(--yellow)"></span>12. Changes to These Terms</h2>
   <p>We may update these Terms from time to time. Changes take effect when posted on this page, and the “Last updated” date will be revised. Your continued use of our website or Apps after changes are posted means you accept the updated Terms.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>13. Governing Law</h2>
+<section class="sec" id="s14">
+  <h2><span class="dot" style="background:var(--orange)"></span>13. Governing Law</h2>
   <p>These Terms are governed by the laws of the Kingdom of Morocco, without regard to conflict-of-law rules, except where mandatory consumer protection laws of your country of residence provide otherwise.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>14. Contact Us</h2>
+<section class="sec" id="s15">
+  <h2><span class="dot" style="background:var(--blue)"></span>14. Contact Us</h2>
   <p>If you have any questions about these Terms, please contact us:</p>
   <ul><li>Email: <a href="mailto:support@fa9ssa.space">support@fa9ssa.space</a></li><li>Email: <a href="mailto:info@fa9ssa.space">info@fa9ssa.space</a></li><li>Website: <a href="contact.html">fa9ssa.space/contact</a></li></ul>
-</div>
+</section>
 
+  </main>
 </div>
-
-<footer>
-  <div><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></div>
-  <div style="margin-top:10px">© 2026 Fa9Ssa DEV – All rights reserved</div>
+<footer class="foot neu">
+  <span>© 2026 Fa9Ssa DEV – All rights reserved</span>
+  <nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
 </footer>
-
+</div>
 </body>
 </html>

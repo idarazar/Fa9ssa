@@ -2,128 +2,190 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Watch Finder &amp; Connect – Terms of Use - Fa9Ssa DEV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Favicon -->
+<title>Bluetooth Auto Connect – Terms of Use - Fa9Ssa DEV</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232563eb;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2338bdf8;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='url(%23grad)'/%3E%3Ctext x='50' y='70' font-size='60' font-weight='bold' text-anchor='middle' fill='white' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:#0f172a;color:#fff;line-height:1.7}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 40px;background:rgba(2,6,23,0.95);backdrop-filter:blur(10px);position:sticky;top:0;z-index:100;box-shadow:0 4px 6px rgba(0,0,0,0.3)}
-nav h2{margin:0;font-size:22px;font-weight:700}
-nav ul{list-style:none;display:flex;gap:25px;margin:0;padding:0}
-nav a{color:#e5e7eb;text-decoration:none;font-size:15px;transition:color 0.3s}
-nav a:hover,nav a.active{color:#38bdf8}
-.cover{height:280px;background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 50%,#38bdf8 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:0 20px}
-.cover::before{content:'';position:absolute;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,0.1) 1px,transparent 1px);background-size:50px 50px;animation:slide 20s linear infinite}
-@keyframes slide{0%{transform:translate(0,0)}100%{transform:translate(50px,50px)}}
-.cover h1{font-size:38px;margin:0 0 8px 0;position:relative;z-index:1}
-.cover p{font-size:16px;margin:0;opacity:0.9;position:relative;z-index:1;color:#e0f2fe}
-.content{max-width:900px;margin:50px auto;padding:0 40px 60px 40px}
-.intro-box{background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(56,189,248,0.15));border:2px solid rgba(56,189,248,0.3);border-radius:16px;padding:25px 30px;margin-bottom:40px;box-shadow:0 8px 32px rgba(0,0,0,0.3)}
-.intro-box p{margin:0 0 10px 0;font-size:15px;color:#cbd5e1}
+:root{--bg:#e8ecf1;--card:#eef1f5;--ink:#2b313b;--ink2:#4a5261;--muted:#8a93a2;--line:#d9dee5;
+--out:9px 9px 22px #c6cbd3,-9px -9px 22px #ffffff;--out-sm:5px 5px 12px #c9ced6,-5px -5px 12px #ffffff;
+--in:inset 5px 5px 10px #cbd0d8,inset -5px -5px 10px #ffffff;
+--green:#6dbb8c;--pink:#efb9c1;--yellow:#efcd6c;--orange:#ec9a50;--blue:#5aa3d6;--accent:#4f9a73}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;background:#dfe3e9;color:var(--ink);line-height:1.6;padding:28px;font-weight:400}
+a{color:inherit}
+.frame{max-width:1240px;margin:0 auto;background:var(--bg);border-radius:42px;padding:22px;box-shadow:14px 14px 36px #c3c8d0,-14px -14px 36px #f7f9fb}
+.neu{background:var(--card);border-radius:28px;box-shadow:var(--out)}
+.neu-sm{background:var(--card);border-radius:18px;box-shadow:var(--out-sm)}
+.inset{background:var(--bg);border-radius:18px;box-shadow:var(--in)}
+/* NAV */
+.topbar{display:flex;align-items:center;gap:18px;padding:12px 14px 12px 12px;border-radius:24px;background:var(--card);box-shadow:var(--out-sm);margin-bottom:24px}
+.round{width:44px;height:44px;flex-shrink:0;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--card);box-shadow:var(--out-sm);text-decoration:none;color:var(--ink);font-weight:600;font-size:17px;transition:box-shadow .25s}
+.round:hover{box-shadow:var(--in)}
+.round svg{width:20px;height:20px}
+.links{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+.links a{display:block;padding:8px 16px;border-radius:12px;font-size:14px;color:var(--ink2);text-decoration:none;transition:all .25s}
+.links a:hover{color:var(--ink)}
+.links a.active{box-shadow:var(--in);color:var(--ink);font-weight:500}
+.search{margin-left:auto;display:flex;align-items:center;gap:8px;padding:0 16px;height:44px;width:260px;border-radius:14px;background:var(--bg);box-shadow:var(--in)}
+.search svg{width:16px;height:16px;color:var(--muted);flex-shrink:0}
+.search input{border:0;background:transparent;outline:0;font:inherit;font-size:13px;color:var(--ink);width:100%}
+.search input::placeholder{color:var(--muted)}
+.wordmark{font-weight:300;font-size:30px;letter-spacing:.06em;color:var(--ink)}
+.wordmark b{font-weight:500}
+.kicker{font-size:12px;color:var(--muted);letter-spacing:.02em}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex-shrink:0}
+/* FOOTER */
+.foot{margin-top:24px;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+.foot a{text-decoration:none;color:var(--ink2)}
+.foot a:hover{color:var(--ink)}
+@media(max-width:900px){body{padding:12px}.frame{padding:14px;border-radius:30px}.topbar{flex-wrap:wrap}.search{width:100%;order:5}}
+@media(max-width:640px){.topbar{gap:10px;padding:10px}.links{order:4;width:100%;justify-content:space-between;gap:0}.links a{padding:7px 9px;font-size:13px}.topbar>.round:last-of-type{margin-left:auto}}
+
+.doc{display:grid;grid-template-columns:290px 1fr;gap:24px;align-items:start}
+.side{display:flex;flex-direction:column;gap:22px;position:sticky;top:20px}
+.side .neu{padding:24px}
+.docid{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:26px}
+.docid .round{width:40px;height:40px;border-radius:50%}
+.bignum{font-weight:300;font-size:38px;line-height:1;letter-spacing:.02em;text-align:right}
+.side h3{font-size:15px;font-weight:500;margin-bottom:14px}
+.toc{list-style:none;display:flex;flex-direction:column;gap:2px;max-height:52vh;overflow:auto;padding-right:4px}
+.toc a{display:flex;align-items:center;gap:12px;padding:8px 6px;border-radius:12px;font-size:12.5px;color:var(--ink2);text-decoration:none;transition:all .2s}
+.toc a:hover{box-shadow:var(--in)}
+.toc a span.t{flex:1;line-height:1.35}
+.toc a span.n{color:var(--muted);font-size:11px}
+.mail-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 16px;border-radius:14px;font-size:13px;text-decoration:none;color:var(--ink);box-shadow:var(--out-sm);transition:box-shadow .25s;word-break:break-all}
+.mail-btn:hover{box-shadow:var(--in)}
+.main{padding:40px 44px}
+.main .wordmark{font-size:26px;margin-bottom:26px}
+.main h1{font-weight:300;font-size:46px;line-height:1.1;letter-spacing:-.01em;margin-bottom:10px}
+.main .sub{font-size:15px;color:var(--ink2);margin-bottom:34px}
+.intro-box{padding:22px 26px;margin-bottom:28px;border-radius:22px;background:var(--bg);box-shadow:var(--in)}
+.intro-box p{font-size:14.5px;color:var(--ink2);margin:0 0 8px}
 .intro-box p:last-child{margin:0}
-.section{background:#1e293b;border-radius:16px;padding:30px;margin-bottom:25px;border-left:4px solid #38bdf8;transition:all 0.3s}
-.section:hover{box-shadow:0 8px 24px rgba(0,0,0,0.4);transform:translateX(4px)}
-.section h2{color:#38bdf8;font-size:24px;margin:0 0 20px 0;display:flex;align-items:center;gap:10px}
-.section h2::before{content:'';width:6px;height:6px;background:#38bdf8;border-radius:50%;box-shadow:0 0 10px #38bdf8;flex-shrink:0}
-.section p{color:#cbd5e1;margin:0 0 15px 0;font-size:15px}
-.section p:last-child{margin-bottom:0}
-.section ul{margin:15px 0;padding-left:25px;color:#cbd5e1}
-.section li{margin-bottom:10px;font-size:15px}
-.section strong{color:#e0f2fe;font-weight:600}
-.section a{color:#38bdf8;text-decoration:none;border-bottom:1px solid transparent;transition:border-color 0.3s}
-.section a:hover{border-bottom-color:#38bdf8}
-.highlight-box{background:rgba(56,189,248,0.1);border-left:3px solid #38bdf8;padding:15px 20px;margin:20px 0;border-radius:8px}
+.intro-box a{color:var(--accent)!important}
+.sec{padding:26px 28px;margin-bottom:22px;border-radius:24px;background:var(--card);box-shadow:var(--out-sm);scroll-margin-top:20px}
+.sec h2{font-size:18px;font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.sec h2 .dot{width:9px;height:9px}
+.sec h3{font-size:15px;font-weight:500;margin:20px 0 10px;color:var(--ink)}
+.sec p{font-size:14.5px;color:var(--ink2);margin:0 0 12px}
+.sec p:last-child{margin-bottom:0}
+.sec ul,.sec ol{margin:10px 0 14px;padding-left:22px;color:var(--ink2);font-size:14.5px}
+.sec li{margin-bottom:8px}
+.sec strong,.sec .bold{color:var(--ink);font-weight:500}
+.sec a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+.sec a:hover{border-bottom-color:var(--accent)}
+.highlight-box{margin:16px 0;padding:16px 20px;border-radius:16px;background:var(--bg);box-shadow:var(--in)}
+.highlight-box p,.highlight-box{font-size:14.5px;color:var(--ink2)}
 .highlight-box p{margin:0}
-.app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:15px;margin:20px 0 5px 0}
-.app-card{display:flex;align-items:center;gap:14px;background:rgba(15,23,42,0.5);padding:14px;border-radius:12px;border:1px solid rgba(56,189,248,0.2);transition:all 0.3s;text-decoration:none!important;border-bottom:1px solid rgba(56,189,248,0.2)!important}
-.app-card:hover{border-color:#38bdf8!important;background:rgba(15,23,42,0.85);transform:translateY(-2px)}
-.app-card img{width:48px;height:48px;border-radius:12px;flex-shrink:0;background:#0f172a}
-.app-card span{display:block}
-.app-card .n{color:#f8fafc;font-weight:600;font-size:15px;line-height:1.3}
-.app-card .t{color:#38bdf8;font-size:13px}
-.back{display:inline-block;margin-bottom:25px;color:#38bdf8;text-decoration:none;font-size:15px}
-.back:hover{text-decoration:underline}
-footer{text-align:center;padding:30px;font-size:14px;color:#94a3b8;background:#020617;border-top:1px solid #1e293b}
-footer a{color:#94a3b8;text-decoration:none;margin:0 8px}
-footer a:hover{color:#38bdf8}
-@media(max-width:768px){nav{padding:16px 20px;flex-wrap:wrap;gap:10px}nav ul{gap:15px;font-size:14px;flex-wrap:wrap}.cover{height:240px}.cover h1{font-size:28px}.content{padding:0 20px 40px 20px}.section{padding:20px}.app-grid{grid-template-columns:1fr}}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .amt{font-weight:300;font-size:34px;color:var(--ink);line-height:1}
+.app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin:18px 0 4px}
+.app-card{display:flex;align-items:center;gap:14px;padding:14px;border-radius:18px;background:var(--card);box-shadow:var(--out-sm);text-decoration:none!important;border:0!important;transition:box-shadow .25s}
+.app-card:hover{box-shadow:var(--in)}
+.app-card img{width:46px;height:46px;border-radius:13px;flex-shrink:0;box-shadow:3px 3px 8px #c6cbd3,-3px -3px 8px #fff}
+.app-card .n{display:block;color:var(--ink);font-weight:500;font-size:13.5px;line-height:1.3}
+.app-card .t{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:16px 0}
+.service-card{padding:18px;border-radius:18px;background:var(--bg);box-shadow:var(--in)}
+.service-card h4{font-size:14.5px;font-weight:500;margin-bottom:6px}
+.service-card p{font-size:13px!important;margin-bottom:8px!important}
+.back{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;padding:8px 14px;border-radius:12px;font-size:13px;color:var(--ink2);text-decoration:none;box-shadow:var(--out-sm)}
+.back:hover{box-shadow:var(--in)}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.side{position:static}.toc{max-height:none}.main{padding:26px 20px}.main h1{font-size:34px}.sec{padding:20px}}
+
 </style>
 </head>
 <body>
-
-<!-- NAVBAR -->
-<nav>
-  <h2>📱 Fa9Ssa DEV</h2>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="privacy.html">Privacy</a></li>
-    <li><a href="terms.html" class="active">Terms</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
-<!-- COVER -->
-<section class="cover">
-  <h1>Watch Finder &amp; Connect</h1>
-  <p>Terms of Use</p>
-</section>
-
-<div class="content">
+<div class="frame">
+<header class="topbar">
+  <a class="round" href="index.html" aria-label="Fa9Ssa DEV home">F</a>
+  <ul class="links"><li><a href="index.html">Home</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html" class="active">Terms</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <form class="search" action="index.html" method="get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" name="q" placeholder="Search apps"></form>
+  <a class="round" href="contact.html" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
+</header>
+<div class="doc">
+  <aside class="side">
+    <div class="neu">
+      <div class="docid"><span class="round" aria-hidden="true">F</span><div><div class="kicker" style="text-align:right">Terms of Use</div><div class="bignum">07</div></div></div>
+      <div class="kicker">Sections in this document</div>
+    </div>
+    <div class="neu">
+      <h3>On this page</h3>
+      <ul class="toc">
+      <li><a href="#s1"><span class="dot" style="background:var(--green)"></span><span class="t">Acceptance of Terms</span><span class="n">01</span></a></li>
+      <li><a href="#s2"><span class="dot" style="background:var(--pink)"></span><span class="t">License to Use</span><span class="n">02</span></a></li>
+      <li><a href="#s3"><span class="dot" style="background:var(--yellow)"></span><span class="t">Location Estimates &amp; Connections</span><span class="n">03</span></a></li>
+      <li><a href="#s4"><span class="dot" style="background:var(--orange)"></span><span class="t">No Affiliation</span><span class="n">04</span></a></li>
+      <li><a href="#s5"><span class="dot" style="background:var(--blue)"></span><span class="t">Ads &amp; In-App Purchases</span><span class="n">05</span></a></li>
+      <li><a href="#s6"><span class="dot" style="background:var(--green)"></span><span class="t">Disclaimer &amp; Limitation of Liability</span><span class="n">06</span></a></li>
+      <li><a href="#s7"><span class="dot" style="background:var(--pink)"></span><span class="t">Changes &amp; Contact</span><span class="n">07</span></a></li>
+      </ul>
+    </div>
+    <div class="neu">
+      <h3>Questions?</h3>
+      <p class="kicker" style="font-size:13px">Our team usually replies within 48 hours.</p>
+      <a class="mail-btn" href="mailto:support@fa9ssa.space"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg> support@fa9ssa.space</a>
+    </div>
+  </aside>
+  <main class="main neu">
+    <div class="wordmark">Fa9<b>S</b>sa</div>
+    <h1>Bluetooth Auto Connect</h1>
+    <p class="sub">Terms of Use</p>
 <a class="back" href="terms.html">← Back to all Terms</a>
 <div class="intro-box">
   <p><strong>Last updated:</strong> November 10, 2026</p>
-  <p>These Terms of Use apply specifically to <strong>Watch Finder & Connect</strong>, an Android app that lets you find nearby smartwatches and Bluetooth wearables and help manage connections with them. They complement our general <a href="terms.html" style="color:#38bdf8">Terms of Use</a>.</p>
+  <p>These Terms of Use apply specifically to <strong>Bluetooth Auto Connect</strong>, an Android app that lets you find nearby smartwatches and Bluetooth wearables and help manage connections with them. They complement our general <a href="terms.html" style="color:#38bdf8">Terms of Use</a>.</p>
 </div>
-<div class="section">
-  <h2>1. Acceptance of Terms</h2>
-  <p>By downloading, installing or using <strong>Watch Finder & Connect</strong> (the “App”), you agree to these Terms of Use and to our general <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a>. If you do not agree, please uninstall the App and do not use it.</p>
-  <p>The App is published on Google Play by <strong>Fa9Ssa DEV</strong> (“we”, “us”, the “Developer”). Store listing: <a href="https://play.google.com/store/apps/details?id=com.find.watch" target="_blank" rel="noopener">Watch Finder & Connect on Google Play</a>.</p>
-</div>
+<section class="sec" id="s1">
+  <h2><span class="dot" style="background:var(--green)"></span>1. Acceptance of Terms</h2>
+  <p>By downloading, installing or using <strong>Bluetooth Auto Connect</strong> (the “App”), you agree to these Terms of Use and to our general <a href="terms.html">Terms of Use</a> and <a href="privacy.html">Privacy Policy</a>. If you do not agree, please uninstall the App and do not use it.</p>
+  <p>The App is published on Google Play by <strong>Fa9Ssa DEV</strong> (“we”, “us”, the “Developer”). Store listing: <a href="https://play.google.com/store/apps/details?id=com.find.watch" target="_blank" rel="noopener">Bluetooth Auto Connect on Google Play</a>.</p>
+</section>
 
-<div class="section">
-  <h2>2. License to Use</h2>
-  <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use Watch Finder & Connect on Android devices you own or control, for personal, non-commercial purposes.</p>
+<section class="sec" id="s2">
+  <h2><span class="dot" style="background:var(--pink)"></span>2. License to Use</h2>
+  <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use Bluetooth Auto Connect on Android devices you own or control, for personal, non-commercial purposes.</p>
   <p>You may not copy, modify, decompile, reverse engineer, resell, redistribute or create derivative works of the App, or use it in any illegal way or in a way that could damage, disable or overload our services.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>3. Location Estimates & Connections</h2>
+<section class="sec" id="s3">
+  <h2><span class="dot" style="background:var(--yellow)"></span>3. Location Estimates & Connections</h2>
   <div class="highlight-box"><p>Proximity readings are <strong>estimates based on Bluetooth signal strength</strong> and may be inaccurate. Automatic connection features depend on your phone, your watch, its firmware and the Android Bluetooth stack.</p></div>
   <p>We do not guarantee that you will find a lost watch or that every wearable will connect or stay connected. The Developer is not responsible for lost devices, data loss on your wearable or pairing issues.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>4. No Affiliation</h2>
+<section class="sec" id="s4">
+  <h2><span class="dot" style="background:var(--orange)"></span>4. No Affiliation</h2>
   <p>The App is not affiliated with any smartwatch manufacturer (such as Samsung, Apple, Google, Huawei, Xiaomi or Garmin). All brand names are trademarks of their respective owners.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>5. Ads & In-App Purchases</h2>
+<section class="sec" id="s5">
+  <h2><span class="dot" style="background:var(--blue)"></span>5. Ads & In-App Purchases</h2>
   <p>The App is free to download and may display advertisements served by third-party networks such as Google AdMob. These partners may use device identifiers to show and measure ads, as explained in our <a href="privacy.html">Privacy Policy</a>. You can reset or limit ad personalization in your Android settings.</p>
   <p>Optional in-app purchases (for example removing ads or unlocking premium features) are processed exclusively by <strong>Google Play Billing</strong>. Prices are shown before purchase. Refunds are handled according to Google Play's refund policy.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>6. Disclaimer & Limitation of Liability</h2>
+<section class="sec" id="s6">
+  <h2><span class="dot" style="background:var(--green)"></span>6. Disclaimer & Limitation of Liability</h2>
   <p>The App is provided <strong>“as is” and “as available”</strong>, without warranties of any kind. To the maximum extent permitted by law, the Developer is not liable for any indirect, incidental or consequential damages, data loss, device damage or loss of profits arising from your use of, or inability to use, the App.</p>
   <p>Nothing in these Terms limits any rights you may have as a consumer that cannot be excluded under applicable law.</p>
-</div>
+</section>
 
-<div class="section">
-  <h2>7. Changes & Contact</h2>
+<section class="sec" id="s7">
+  <h2><span class="dot" style="background:var(--pink)"></span>7. Changes & Contact</h2>
   <p>We may update the App and these Terms from time to time. The “Last updated” date at the top of this page shows the latest version. Continued use of the App after changes means you accept the updated Terms.</p>
   <p>Questions? Contact us at <a href="mailto:support@fa9ssa.space">support@fa9ssa.space</a> or visit our <a href="contact.html">Contact page</a>.</p>
-</div>
+</section>
 
+  </main>
 </div>
-
-<footer>
-  <div><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="contact.html">Contact</a></div>
-  <div style="margin-top:10px">© 2026 Fa9Ssa DEV – All rights reserved</div>
+<footer class="foot neu">
+  <span>© 2026 Fa9Ssa DEV – All rights reserved</span>
+  <nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
 </footer>
-
+</div>
 </body>
 </html>
