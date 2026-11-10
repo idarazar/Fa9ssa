@@ -96,6 +96,51 @@ a{color:inherit}
 .back:hover{box-shadow:var(--in)}
 @media(max-width:900px){.doc{grid-template-columns:1fr}.side{position:static}.toc{max-height:none}.main{padding:26px 20px}.main h1{font-size:34px}.sec{padding:20px}}
 
+.hero{display:grid;grid-template-columns:290px 1fr;gap:24px;align-items:start}
+.col{display:flex;flex-direction:column;gap:22px;position:sticky;top:20px}
+.col .neu{padding:22px 24px}
+.clockrow{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px}
+.clock{width:112px;height:112px;border-radius:50%;background:var(--card);box-shadow:var(--out-sm),inset 0 0 0 10px var(--bg);position:relative}
+.clock i{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;background:var(--ink);border-radius:2px}
+.clock .h{width:2px;height:28px;margin-left:-1px}.clock .m{width:1.5px;height:40px;margin-left:-.75px}
+.clock .s{width:1px;height:42px;margin-left:-.5px;background:var(--orange)}
+.clock b{position:absolute;left:50%;top:50%;width:6px;height:6px;margin:-3px;border-radius:50%;background:var(--ink)}
+.knob{width:38px;height:38px;border-radius:50%;box-shadow:var(--out-sm);display:flex;align-items:center;justify-content:center}
+.knob span{width:10px;height:10px;border-radius:50%;background:var(--ink)}
+.bignum{font-weight:300;font-size:40px;line-height:1;text-align:right;letter-spacing:.02em}
+.col h3{font-size:14px;font-weight:500;margin-bottom:12px}
+.toc{list-style:none;display:flex;flex-direction:column;max-height:46vh;overflow:auto;padding-right:4px}
+.toc a{display:flex;align-items:center;gap:12px;padding:9px 0;font-size:12.5px;color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--line)}
+.toc li:last-child a{border:0}
+.toc a:hover{color:var(--ink)}
+.toc a span.t{flex:1;line-height:1.35}
+.toc a span.n{color:var(--muted);font-size:11px}
+.minis{display:flex;gap:10px;margin:4px 0 14px}
+.minis img{width:40px;height:40px;border-radius:12px;box-shadow:3px 3px 8px #c6cbd3,-3px -3px 8px #fff}
+.mail-btn{display:inline-flex;align-items:center;gap:8px;margin-top:4px;padding:10px 16px;border-radius:14px;font-size:13px;text-decoration:none;color:var(--ink);box-shadow:var(--out-sm);transition:box-shadow .25s;word-break:break-all}
+.mail-btn:hover{box-shadow:var(--in)}
+.donutcard{display:flex;align-items:center;gap:18px}
+.donut{width:96px;height:96px;border-radius:50%;flex-shrink:0;position:relative;box-shadow:var(--out-sm);background:conic-gradient(#6dbb8c 0 72deg,#efb9c1 72deg 180deg,#efcd6c 180deg 252deg,#ec9a50 252deg 360deg)}
+.donut::after{content:'';position:absolute;inset:26px;border-radius:50%;background:var(--card);box-shadow:var(--in)}
+.donutcard p{font-size:13.5px;line-height:1.45;color:var(--ink2)}
+.stage{padding:38px 42px 34px}
+.stage .wordmark{margin-bottom:24px}
+.stage .lead{font-weight:300;font-size:22px;color:var(--ink2);line-height:1.4;max-width:560px}
+.stage h1{font-weight:300;font-size:60px;line-height:1.05;letter-spacing:-.01em;margin:6px 0 4px}
+.stage .after{font-weight:300;font-size:18px;color:var(--ink2)}
+.float{position:relative;height:230px;margin:10px 0 18px}
+.float svg.path{position:absolute;inset:0;width:100%;height:100%}
+.tile{position:absolute;width:76px;height:76px;border-radius:20px;background:var(--card);box-shadow:12px 14px 22px #c3c8d0,-8px -8px 18px #fff;display:flex;align-items:center;justify-content:center;transform:rotate(var(--r));animation:bob 6s ease-in-out infinite}
+.tile img{width:50px;height:50px;border-radius:13px}
+@keyframes bob{0%,100%{transform:rotate(var(--r)) translateY(0)}50%{transform:rotate(var(--r)) translateY(-8px)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin:0 0 28px;padding:20px 8px;border-radius:24px;box-shadow:var(--out-sm);background:var(--card)}
+.stats div{padding:0 18px;border-right:1px solid var(--line)}
+.stats div:last-child{border:0}
+.stats b{display:block;font-weight:300;font-size:26px;line-height:1.2}
+.stats span{font-size:11px;color:var(--muted);line-height:1.35;display:block}
+@media(max-width:1000px){.hero{grid-template-columns:1fr}.stage{order:-1}.col{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}.toc{max-height:none}}
+@media(max-width:640px){.stage{padding:26px 18px}.stage h1{font-size:40px}.float{height:190px}.tile{width:58px;height:58px;border-radius:16px}.tile img{width:38px;height:38px}.stats{grid-template-columns:1fr 1fr;row-gap:16px}.stats div:nth-child(2){border:0}.clockcard{display:none!important}.sec{padding:20px}}
+
 </style>
 </head>
 <body>
@@ -106,11 +151,11 @@ a{color:inherit}
   <form class="search" action="index.html" method="get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input type="text" name="q" placeholder="Search apps"></form>
   <a class="round" href="contact.html" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
 </header>
-<div class="doc">
-  <aside class="side">
-    <div class="neu">
-      <div class="docid"><span class="round" aria-hidden="true">F</span><div><div class="kicker" style="text-align:right">Contact</div><div class="bignum">01</div></div></div>
-      <div class="kicker">Sections in this document</div>
+<div class="hero">
+  <aside class="col">
+    <div class="neu clockcard">
+      <div class="clockrow"><div class="clock" id="clock"><i class="h"></i><i class="m"></i><i class="s"></i><b></b></div><div class="knob"><span></span></div></div>
+      <div class="kicker" style="text-align:right">Contact</div><div class="bignum">01</div>
     </div>
     <div class="neu">
       <h3>On this page</h3>
@@ -119,15 +164,29 @@ a{color:inherit}
       </ul>
     </div>
     <div class="neu">
-      <h3>Questions?</h3>
-      <p class="kicker" style="font-size:13px">Our team usually replies within 48 hours.</p>
-      <a class="mail-btn" href="mailto:support@fa9ssa.space"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg> support@fa9ssa.space</a>
+      <h3>Our apps</h3>
+      <div class="minis"><img src="https://play-lh.googleusercontent.com/Gt_cEQ5VHnhTfIsrglh8bkJWzABkqomBigr5Motu3XRD89IUFCo4d4iwA0w7Val0asfqde89F773ofxnSsoA=s256-rw" alt="MirrorLink - Car Screen" loading="lazy"><img src="https://play-lh.googleusercontent.com/pyUYtvKFYDPmNuMquNdcRLmxC6Miy9BdGeBvoC8C5YEhBFIhtRkRcUF5AdFp3cM0BMfd7f5klN9hHiGDTlwaALQ=s256-rw" alt="Connected Wifi Info" loading="lazy"><img src="https://play-lh.googleusercontent.com/niRWWLqQ4xvaWJe5u8qMfebTkvYrhVcEq1fHdTiV0jNp80qZqCSTuvviik-2kPTtW0gsnftwhZgvBWETA0kfcg=s256-rw" alt="Tracker Detector" loading="lazy"><img src="https://play-lh.googleusercontent.com/lX3iFi5RVwXmjyR3W9yjT_YHD6wCDEp5u39PmIv67OkAa9kO-w5kY7jGXdg3mXTOBAFI4t6taItVSrQKSI4lSQ=s256-rw" alt="Remote Gamepad" loading="lazy"></div>
+      <a class="mail-btn" href="index.html#apps">See all 10 apps →</a>
+    </div>
+    <div class="neu donutcard">
+      <div class="donut"></div>
+      <p>Questions? Write to us at <a href="mailto:support@fa9ssa.space" style="color:var(--accent);text-decoration:none;word-break:break-all">support@fa9ssa.space</a></p>
     </div>
   </aside>
-  <main class="main neu">
+  <main class="neu stage">
     <div class="wordmark">Fa9<b>S</b>sa</div>
+    <div class="lead">We're happy to help</div>
     <h1>Contact Us</h1>
-    <p class="sub">We're happy to help</p>
+    <div class="float" aria-hidden="true">
+      <svg class="path" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M11 28 C 22 8, 36 16, 41 16 S 66 12, 74 30 S 68 76, 50 82 S 22 80, 17 72 S 8 48, 11 28" fill="none" stroke="#9aa3b0" stroke-dasharray="5 5" vector-effect="non-scaling-stroke" style="stroke-width:1.3"/></svg>
+      <div class="tile" style="left:6%;top:12%;--r:-6deg;animation-delay:0.0s"><img src="https://play-lh.googleusercontent.com/Gt_cEQ5VHnhTfIsrglh8bkJWzABkqomBigr5Motu3XRD89IUFCo4d4iwA0w7Val0asfqde89F773ofxnSsoA=s256-rw" alt="MirrorLink - Car Screen"></div>
+<div class="tile" style="left:36%;top:2%;--r:4deg;animation-delay:0.6s"><img src="https://play-lh.googleusercontent.com/pyUYtvKFYDPmNuMquNdcRLmxC6Miy9BdGeBvoC8C5YEhBFIhtRkRcUF5AdFp3cM0BMfd7f5klN9hHiGDTlwaALQ=s256-rw" alt="Connected Wifi Info"></div>
+<div class="tile" style="left:68%;top:14%;--r:-3deg;animation-delay:1.2s"><img src="https://play-lh.googleusercontent.com/niRWWLqQ4xvaWJe5u8qMfebTkvYrhVcEq1fHdTiV0jNp80qZqCSTuvviik-2kPTtW0gsnftwhZgvBWETA0kfcg=s256-rw" alt="Tracker Detector"></div>
+<div class="tile" style="left:12%;top:58%;--r:5deg;animation-delay:1.7999999999999998s"><img src="https://play-lh.googleusercontent.com/lX3iFi5RVwXmjyR3W9yjT_YHD6wCDEp5u39PmIv67OkAa9kO-w5kY7jGXdg3mXTOBAFI4t6taItVSrQKSI4lSQ=s256-rw" alt="Remote Gamepad"></div>
+<div class="tile" style="left:44%;top:64%;--r:-4deg;animation-delay:2.4s"><img src="https://play-lh.googleusercontent.com/97VUZ2HC54ikTFqcfiNTEtbC7Ln9bclMA_Zm875kSIJecK46QdXCi-2GIUMJLGn9yEgmZ2RnxY5A-UFJlxSx=s256-rw" alt="Camera endoscope"></div>
+<div class="tile" style="left:76%;top:54%;--r:6deg;animation-delay:3.0s"><img src="https://play-lh.googleusercontent.com/2sTyfb7NyUBROna7joL6ECLTG_v4qMAzg8_1DrMZsK54kaj9KYCjG_LsG7XGtIQMYbsiG1upLWY2Fz8biQQG=s256-rw" alt="Cast to TV"></div>
+    </div>
+    <div class="stats"><div><b>01</b><span>sections in<br>this page</span></div><div><b>10</b><span>apps<br>covered</span></div><div><b>48h</b><span>average<br>reply time</span></div><div><b>100%</b><span>free to<br>download</span></div></div>
 <div class="intro-box"><p>If you have any questions or support requests, feel free to contact us.</p></div>
 <section class="sec" id="s1">
   <h2><span class="dot" style="background:var(--green)"></span>Email Us</h2>
@@ -142,5 +201,9 @@ a{color:inherit}
   <nav><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
 </footer>
 </div>
+<script>
+(function(){const c=document.getElementById('clock');if(!c)return;const h=c.querySelector('.h'),m=c.querySelector('.m'),s=c.querySelector('.s');
+function t(){const d=new Date(),S=d.getSeconds(),M=d.getMinutes()+S/60,H=(d.getHours()%12)+M/60;h.style.transform='rotate('+H*30+'deg)';m.style.transform='rotate('+M*6+'deg)';s.style.transform='rotate('+S*6+'deg)';}t();setInterval(t,1000);})();
+</script>
 </body>
 </html>
